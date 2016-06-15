@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'cast' => 'cast#index'
+  get 'cast/:id' => 'cast#show', as: 'a_cast'
 end
 
 
