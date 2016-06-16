@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   get 'cast' => 'cast#index'
+
+  post 'cast' => 'cast#create'
+  get 'cast/new' => 'cast#new'
+
   get 'cast/:id' => 'cast#show', as: 'a_cast'
+
+
 end
 
 
