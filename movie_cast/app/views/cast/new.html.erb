@@ -1,15 +1,15 @@
 <h1>Add a movie and Cast!</h1>
 
-<%= form_tag "/cast" do %>
+<%= form_for @movie do |f|%>
   <p>
-    <%= label_tag :movie_title %><br>
-    <%= text_field_tag :movie_title %>
+    <%= f.label :movie_title %><br>
+    <%= f.text_field :movie_title %>
   </p>
   <p>
-    <%= label_tag :url %><br>
-    <%= text_field_tag :url %>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
   </p>
   <p>
-    <%= submit_tag "Save" %>
+    <%= f.submit "Save" %>
   </p>
 <% end %>

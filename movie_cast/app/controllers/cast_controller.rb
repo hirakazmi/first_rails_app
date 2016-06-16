@@ -8,7 +8,21 @@ class CastController < ApplicationController
   end
 
   def create
-    render text: "Saving a picture. URL: #{params[:url]}, Movie Title: #{params[:movie_title]}"
+    @movie = Cast.new(movie_params)
+    if @movie.save
+      redirect_to cast_url
+    else
+      render :new
+    end
+  end
+
+  def new
+    @movie = Cast.new
+  end
+
+  private
+  def movie_params
+    params.require(:movie).permit(:movie_title, :url)
   end
 
 end
