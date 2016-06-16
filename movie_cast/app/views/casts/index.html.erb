@@ -1,5 +1,7 @@
 <h1>Cast of movies</h1>
 
+<%= link_to "Add new Movie and Cast", "/casts/new" %>
+
 <ul>
 <% @movie.each do |movie|%>
   <li><p><%= movie.movie_title%></p> </li>
