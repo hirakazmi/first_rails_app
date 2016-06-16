@@ -1,7 +1,7 @@
 <h1>Cast of movies</h1>
 
 <ul>
-<% @movies.each do |movie|%>
+<% @movie.each do |movie|%>
   <li><p><%= movie.movie_title%></p> </li>
   <img src="<%= movie.url %>">
 <% end %>

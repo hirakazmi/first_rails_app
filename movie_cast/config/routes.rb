@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  root 'cast#index'
-  get 'cast' => 'cast#index'
+  root 'casts#index'
+  get 'casts' => 'casts#index'
 
-  post 'cast' => 'cast#create'
-  get 'cast/new' => 'cast#new'
+  post 'casts' => 'casts#create'
+  get 'casts/new' => 'casts#new'
 
-  get 'cast/:id' => 'cast#show', as: 'a_cast'
+  get 'casts/:id' => 'casts#show', as: 'a_cast'
 
 
 end

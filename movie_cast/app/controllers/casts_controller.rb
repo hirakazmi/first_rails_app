@@ -1,6 +1,6 @@
-class CastController < ApplicationController
+class CastsController < ApplicationController
   def index
-    @movies = Cast.all
+    @movie = Cast.all
   end
 
   def show
@@ -10,7 +10,7 @@ class CastController < ApplicationController
   def create
     @movie = Cast.new(movie_params)
     if @movie.save
-      redirect_to cast_url
+      redirect_to casts_path
     else
       render :new
     end
@@ -22,7 +22,7 @@ class CastController < ApplicationController
 
   private
   def movie_params
-    params.require(:movie).permit(:movie_title, :url)
+    params.require(:cast).permit(:movie_title, :url)
   end
 
 end
