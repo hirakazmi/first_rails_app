@@ -20,6 +20,19 @@ class CastsController < ApplicationController
     @movie = Cast.new
   end
 
+  def edit
+    @movie = Cast.find(params[:id])
+  end
+
+  def updated
+    @movie = Cast.find(params[:id])
+    if @movie.update_attribute(movie_params)
+      redirect_to 'casts/#{@movie.id}'
+    else
+      render :edit
+    end
+  end
+
   private
   def movie_params
     params.require(:cast).permit(:movie_title, :url)

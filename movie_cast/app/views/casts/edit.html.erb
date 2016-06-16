@@ -1,0 +1,19 @@
+<h1>Edit Movie Cast</h1>
+
+<p>
+  <%=link_to 'Back', @movie  %>
+</p>
+
+<%= form_for @movie do |f| %>
+  <p>
+     <%= f.label :movie_title %><br>
+     <%= f.text_field :movie_title %>
+   </p>
+   <p>
+     <%= f.label :url %><br>
+     <%= f.text_field :url %>
+   </p>
+   <p>
+     <%= f.submit %>
+   </p>
+  <% end %>

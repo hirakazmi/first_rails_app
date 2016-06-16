@@ -1,5 +1,5 @@
 
-<%= link_to "Back to Movie Casts", casts_url %>
+<%= link_to "Back to Movie Casts", casts_url %> | <%= link_to "Edit", edit_cast_path(@movie) %> | <%= %>
 
 <p><%=@movie.movie_title %></p>
 <img src="<%= @movie.url %>" />
