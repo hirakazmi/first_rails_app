@@ -5,11 +5,12 @@ Rails.application.routes.draw do
   post 'casts' => 'casts#create'
   get 'casts/new' => 'casts#new'
 
-  get 'casts/:id/edit' => "casts#edit", as "edit_cast"
+  get 'casts/:id/edit' => "casts#edit", as: "edit_cast"
   patch 'casts/:id' => "casts#update"
 
   get 'casts/:id' => 'casts#show', as: 'a_cast'
 
+  delete 'casts/:id' => 'casts#destroy', as: 'delete_cast'
 
 end
 

@@ -33,6 +33,12 @@ class CastsController < ApplicationController
     end
   end
 
+  def destroy
+    @movie = Cast.find(params[id])
+    @movie.destroy
+      redirect_to casts_url
+  end
+
   private
   def movie_params
     params.require(:cast).permit(:movie_title, :url)

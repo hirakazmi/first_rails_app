@@ -1,5 +1,5 @@
 
-<%= link_to "Back to Movie Casts", casts_url %> | <%= link_to "Edit", edit_cast_path(@movie) %> | <%= %>
+<%= link_to "Back to Movie Casts", casts_url %> | <%= link_to "Edit", edit_cast_path(@movie) %> | <%= link_to "Delete", delete_cast_path(@movie), method: :delete, data: {confirm: 'Are you sure you want to delete this picture?'} %>
 
 <p><%=@movie.movie_title %></p>
 <img src="<%= @movie.url %>" />
