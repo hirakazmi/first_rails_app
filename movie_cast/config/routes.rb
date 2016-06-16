@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'cast#index'
   get 'cast' => 'cast#index'
 
   post 'cast' => 'cast#create'
